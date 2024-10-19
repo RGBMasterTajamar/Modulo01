@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Tercer ejemplo JQuery</title>
+    <script src="Scripts/jquery-3.7.1.js"></script>
+</head>
+<body>
+    <a href="http://www.ucm.es">Ir a la UCM</a>
+</body>
+</html>
+
+<script>
+    $(function () {
+        //$("a").click(function () {
+        //    alert("Has pulsado en el enlace");
+        //});
+        $("a").click(function (e) {
+            alert("Has pulsado en el enlace");
+            e.preventDefault();
+        });
+    })
+</script>

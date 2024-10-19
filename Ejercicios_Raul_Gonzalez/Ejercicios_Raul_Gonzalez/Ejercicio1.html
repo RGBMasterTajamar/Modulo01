@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Ejercicio 1</title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Factura</h2>
+        <form id="facturaForm">
+            <div class="mb-3">
+                <label for="cliente" class="form-label">Nombre y Apellidos del Cliente:</label>
+                <input type="text" class="form-control" id="cliente" required>
+            </div>
+            <div class="mb-3">
+                <label for="trabajo" class="form-label">Trabajo a Realizar:</label>
+                <select class="form-select" id="trabajo" required>
+                    <option value="">Seleccione un trabajo</option>
+                    <option value="Albañilería">Albañilería</option>
+                    <option value="Fontanería">Fontanería</option>
+                    <option value="Electricidad">Electricidad</option>
+                    <option value="Carpintería">Carpintería</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="horas" class="form-label">Nº de Horas Realizadas:</label>
+                <input type="number" class="form-control" id="horas" required>
+            </div>
+            <div class="mb-3">
+                <label for="precioHora" class="form-label">Precio/Hora:</label>
+                <input type="number" class="form-control" id="precioHora" required>
+            </div>
+            <div class="mb-3">
+                <label>IVA:</label><br />
+                <input type="radio" name="IVA" id="siIVA" checked/>
+                <label>Si</label>
+                <input type="radio" name="IVA" />
+                <label> NO</label>
+            </div>
+            <hr />
+            <div class="mb-3">
+                <label for="importe" class="form-label">Importe (€):</label>
+                <input type="number" class="form-control" id="importe" disabled>
+            </div>
+            <div class="mb-3">
+                <label for="iva" class="form-label">IVA (21%) (€):</label>
+                <input type="number" class="form-control" id="importeIva" disabled>
+            </div>
+            <div class="mb-3">
+                <label for="importeTotal" class="form-label">Importe Total (€):</label>
+                <input type="number" class="form-control" id="importeTotal" disabled>
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="conforme">
+                <label class="form-check-label" for="conforme">Conforme Cliente</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>
+<script>
+    document.getElementById('facturaForm').addEventListener('submit', function (e) {
+        e.preventDefault(); // Evitar el envío del formulario
+
+        // Obtener los valores del formulario
+        const cliente = document.getElementById('cliente').value;
+        const trabajo = document.getElementById('trabajo').value;
+        const horas = parseInt(document.getElementById('horas').value);
+        const precioHora = parseFloat(document.getElementById('precioHora').value);
+        const conforme = document.getElementById('conforme').checked;
+        var chkIva = document.getElementById("siIVA").checked;
+
+        // Calcular importe y total
+        let importeIva;
+        const importe = horas * precioHora;
+        if (chkIva) {
+            importeIva = importe * 0.21; // Solo calcular IVA si está marcado la opcion si
+        } else {
+            importeIva = 0;
+        }
+        const total = importe + importeIva;
+
+        // Mostrar en consola si el cliente está conforme
+        if (conforme) {
+            console.log(`Cliente: ${cliente}`);
+            console.log(`Trabajo: ${trabajo}`);
+            console.log(`Importe de IVA a Facturar: €${importeIva.toFixed(2)}`);
+            console.log(`Total a Facturar: €${total.toFixed(2)}`);
+        } else {
+            console.log('El cliente no está conforme.');
+        }
+
+        document.getElementById("importe").value = importe;
+        document.getElementById("importeIva").value = importeIva;
+        document.getElementById("importeTotal").value = total;
+
+    });
+
+</script>

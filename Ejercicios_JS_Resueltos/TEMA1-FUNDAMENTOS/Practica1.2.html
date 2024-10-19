@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>devolución de valores por una funcion</title>
+    <script language="JavaScript" type="text/JavaScript">
+
+        var nombre_completo;
+
+        function concatenar(nombre, apellido) {
+            nombre_completo = nombre + " " + apellido;
+            return (nombre_completo);
+        }
+        function mostrarNombreCompleto(dato1,dato2) {
+            alert('El nombre completo es : ' + concatenar(dato1, dato2));
+        }
+
+    </script>
+</head>
+<body>
+    <input type="button" value="Aceptar" onClick="mostrarNombreCompleto('Andres','González')" />
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title></title>
+	<script language="JavaScript" type="text/javascript">
+		var i= 1;
+		while(i<=3)
+		{
+			var password = prompt('password');
+			if (password == 'PA')
+			{
+				alert('Correcto');
+				break;
+			}
+			else
+			{
+				if (i != 3)
+				{
+					alert('puedes intentarlo' + (3-i) + " veces mas");
+				}
+			}
+			i++;
+		}
+	</script>
+</head>
+<body>
+</body>
+</html>

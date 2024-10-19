@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <input type="checkbox"
+           name="casilla1
+           onclick="countActivated(this)" checked />Primera <br />
+    <input type="checkbox"
+           name="casilla2
+           onclick="countActivated(this)" />Segunda <br />
+    <input type="checkbox"
+           name="casilla3
+           onclick="countActivated(this)" />Tercera <br />
+    <input type="checkbox"
+           name="casilla4
+           onclick="countActivated(this)" />Cuarta <br />
+</body>
+</html>
+
+<script>
+    // NUMERO MAX DE CASILLAS ACTIVADAS 
+    var maxChkActive = 3;
+    // NUMERO MIN DE CASILLAS ACTIVADAS
+    var minChkActive = 1;
+
+    // INICIALIZAR LAS CASILLAS
+    var totalChkActive = 1;
+
+    function countActivated(currentChk) {
+        // COMPROBAR EL ESTADO DEL CHK ACTUAL
+        if (currentChk.checked) {
+            // SI ESTA ACTIVA SE INCREMETA EL TOTAL
+            totalChkActive++;
+        } else {
+            // SI NO ESTA ACTIVA SE DECREMENTA EL TOTAL
+            totalChkActive--;
+        }
+        // SI SOBREPASA EL MAX PERMITIDO
+        if (totalChkActive > maxChkActive) {
+            // SI ES TRUE DESACTIVO LA CASILLA ACTUAL
+            currentChk.checked = false;
+            totalChkActive = maxChkActive;
+
+            // MOSTRAMOS UN MENSAJE
+            alert(`No puedes activar mas de ${maxChkActive}`);
+
+        }
+
+        // SI SOBREPASA EL MIN PERMITIDO
+        if (totalChkActive < minChkActive) {
+            // SI ES FALSE DESACTIVO LA CASILLA ACTUAL
+            currentChk.checked = true;
+            totalChkActive = minChkActive;
+
+            // MOSTRAMOS UN MENSAJE
+            alert(`Debes activar mas de ${minChkActive}`);
+
+        }
+    }
+
+</script>

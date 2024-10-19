@@ -1,0 +1,41 @@
+<html>
+<head>
+</head>
+<body>
+
+<script type="text/javascript">
+  function calcularPresupuesto()
+  {
+    //var precio=document.getElementById('pizza').value;
+	var precio=formulario1.pizza.value;
+    precio=parseInt(precio);
+    //var cantidad=document.getElementById('cantidad').value;
+	var cantidad=formulario1.txtcantidad.value;
+    cantidad=parseInt(cantidad);
+    var total=precio*cantidad;
+    //document.getElementById('resultado').value=total;
+	formulario1.txtresultado.value=total;
+  }
+</script>
+
+<form name="formulario1">
+Seleccione la pizza:
+<select name="pizza">
+  <option></option>
+  <option value="4">Queso</option>
+  <option value="6">Jamon y Queso</option>
+  <option value="10">Especial</option>
+</select>
+<br>
+Cantidad de pizzas:
+<input type="text" name="txtcantidad">
+<br>
+<input type="button" value="Calcular costo" onClick="calcularPresupuesto()">
+<br>
+Importe:<input type="text" name="txtresultado">
+</form>
+
+</body>
+</html>
+
+</html>

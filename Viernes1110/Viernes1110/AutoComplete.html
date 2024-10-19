@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/blitzer/jquery-ui.css" />
+    <script src="https://code.jquery.com/jquery-2.0.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+</head>
+<body>
+    <input id="autoComplete" />
+</body>
+</html>
+
+<script>
+    $(function () {
+        $("#autoComplete").autocomplete({
+            source: [
+                {
+                    label:"United Kingdom",
+                    value: "UK"
+                },
+                {
+                    label: "United States of America",
+                    value: "USA"
+                },
+                {
+                    label: "Spain",
+                    value: "SPA"
+                }
+            ],
+            delay: 1000,
+            minLength: 2
+        });
+    })
+</script>

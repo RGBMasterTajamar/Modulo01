@@ -1,0 +1,7 @@
+﻿@import '_mixin2a.scss';
+
+body {
+    @include encabezados(2em);
+    font-family:Arial,'Sans Serif Collection';
+    padding:20px;
+}

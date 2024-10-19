@@ -1,0 +1,56 @@
+﻿// Herencia
+// Definicion de placeholder
+
+%button-base{
+    padding:10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor:pointer;
+    text-align:center;
+    display:inline-block;
+}
+
+// Estilos para botones
+
+.button-primary{
+    @extend %button-base;
+    background-color:#3498db;
+    color:#fff;
+
+    &:hover{
+        background-color: darken(#3498db, 10%);
+    }
+}
+
+.button-secondary {
+    @extend %button-base;
+    background-color: #2ecc71;
+    color: #fff;
+
+    &:hover {
+        background-color: darken(#4cff00, 10%);
+    }
+}
+
+// Ejemplo de uso de la clase placeholder con otras reglas
+%alert-base {
+    padding: 20px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.alert-success {
+    @extend %alert-base;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #3c763d;
+}
+
+.alert-danger {
+    @extend %alert-base;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    color: #a94442;
+}

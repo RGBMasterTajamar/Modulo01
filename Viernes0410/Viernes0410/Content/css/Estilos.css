@@ -1,0 +1,42 @@
+body {
+  font-family: 'Arial,Sans Serif Collection';
+  padding: 20px; }
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: #3498db;
+  color: white;
+  padding: 20px; }
+
+.button-primary {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  display: block inline-block;
+  font-size: 16px;
+  margin-right: 10px; }
+  .button-primary:hover {
+    background-color: #217dbb; }
+
+.button-secondary {
+  background-color: #2ecc71;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  display: block inline-block;
+  font-size: 16px;
+  margin-right: 10px; }
+  .button-secondary:hover {
+    background-color: #25a25a; }
+
+/*# sourceMappingURL=Estilos.css.map */

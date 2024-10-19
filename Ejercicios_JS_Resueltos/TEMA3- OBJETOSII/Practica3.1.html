@@ -1,0 +1,38 @@
+<!--APERTURA DE UNA VENTANA-->
+
+<html>
+<head>
+<title>Hacer referencia a la página que ha abierto una ventana</title>
+<style type="text/css">
+	.centrar
+	{
+		position: absolute;
+		/*nos posicionamos en el centro del navegador*/
+		top:20%;
+		left:20%;
+		/*determinamos una anchura*/
+		width:400px;
+		/*indicamos que el margen izquierdo, es la mitad de la anchura*/
+		margin-left:-200px;
+		/*determinamos una altura*/
+		height:300px;
+		/*indicamos que el margen superior, es la mitad de la altura*/
+		margin-top:-150px;
+		border:1px solid #808080;
+		padding:50px;
+	}
+</style>
+<script language="JavaScript" type="text/JavaScript">
+</script>
+</head>
+<body>
+	<div class="centrar">
+	<a href="javascript:void(0)"><img src="amarillo.png" onClick="window.open('./amarilla.html')"></a>
+	<br>
+	<a href="javascript:void(0)"><img src="azul.png" onClick="window.open('./azul.html')"></a>
+	<br>
+	<a href="javascript:void(0)"><img src="rojo.png" onClick="window.open('./roja.html')"></a>
+	</div>
+	
+</body>
+<html>

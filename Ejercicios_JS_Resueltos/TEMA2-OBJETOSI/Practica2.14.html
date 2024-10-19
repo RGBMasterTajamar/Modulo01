@@ -1,0 +1,21 @@
+<!--USO DE FECHAS-->
+
+<html>
+<head>
+<title>Uso de fechas</title>
+<script language="JavaScript" type="text/JavaScript">
+
+var meses = new Array('enero','febrero','marzo','abril','mayo','junio','julio', 'agosto','septiembre','octubre','noviembre','diciembre');
+
+var fecha = prompt ('Introduzca fecha');
+var objeto = new Date(fecha);
+
+var mes = objeto.getMonth();
+alert ('el mes es : ' + meses[mes].toUpperCase());
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

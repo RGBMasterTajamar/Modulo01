@@ -1,0 +1,25 @@
+﻿// Mixins son como funciones
+
+@mixin button-styles($bg-color, $text-color) {
+    background-color: $bg-color;
+    color: $text-color;
+    padding: 10px 20px;
+    border:none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align:center;
+    display:block inline-block;
+    font-size:16px;
+
+    &:hover{
+        background-color: darken($bg-color, 10%);
+    }
+}
+
+
+@mixin flex-container($justify:flex-start, $align:strech, $direction:row) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction:$direction;
+}

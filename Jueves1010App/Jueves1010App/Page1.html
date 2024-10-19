@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="Scripts/jquery-3.7.1.js"></script>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <title></title>
+</head>
+<body>
+    <!-- Ejemplo 1.
+    <ul>
+        <li class="a">Child 1</li>
+        <li class="a">Child 2</li>
+        <li class="b">Child 3</li>
+        <li class="b">Child 4</li>
+        <li class="c">Child 5</li>
+        <li class="a">Child 6</li>
+    </ul>
+         -->
+    <!-- Ejemplo 2 -->
+    <!--<input type="text" class="fecha" />-->
+    <!-- Ejemplo 3 -->
+    <!--<input id="boton" type="button" value="Ocultar nowrap" />
+    <table width="50" border="1">
+        <tr>
+            <td nowrap>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget justo eget nunc dictum congue. Integer vel enim tempus, ultricies tellus eget, euismod felis. Donec neque diam, egestas vitae nunc eget, maximus blandit mauris. Pellentesque venenatis ultrices malesuada. Praesent viverra congue felis, vel tempus lectus convallis vitae. In ut eleifend enim, sed pellentesque odio. Integer dictum, leo in convallis porttitor, elit sapien aliquam turpis, eu tristique nulla tortor nec arcu. Fusce semper purus a nisi maximus semper. Pellentesque odio magna, hendrerit rhoncus erat a, imperdiet elementum est. Cras in augue gravida, viverra elit vitae, porttitor metus. Cras mi nulla, interdum sit amet auctor molestie, volutpat sit amet est. Pellentesque ornare rhoncus nibh vitae bibendum. Duis lobortis enim at augue interdum, porta placerat nunc aliquam. Nam placerat purus ligula. In eget molestie justo.</td>
+        </tr>
+    </table>-->
+    <!-- Ejercicio 1. -->
+    <!-- Eliminar los style de los parrafos de ambos div -->
+    <!--<div id="capa1">
+        <p style="font-family:'Courier New'; font-size:12pt; color#0000FF;">
+            parrafo1 de capa1
+        </p>
+        <p style="font-family:'Courier New'; font-size:15pt; color#FF8000;">
+            parrafo2 de capa1
+        </p>
+    </div>
+    <div id="capa2">
+        <h1>Encabezado de capa2</h1>
+        <p style="font-family:'Courier New'; font-size:15pt; color#DF01d7;">
+            parrafo1 de capa2
+        </p>
+    </div>
+    <input type="button" id="boton1" value="Quitar estilo capa1" />
+    <input type="button" id="boton2" value="Quitar estilo capa2" />-->
+    <!--Ejemplo toggle()-->
+    <!--<input id="target" type="button" value="ESTE BOTON APARECE Y DESAPARECE" />
+    <input id="boton" type="button" value="Llamada a toggle()" />-->
+
+
+    <!--Ejemplo bind y unbind-->
+    <<!--p class="miclase">Primer parrafo</p>
+    <p>Otro parrafo</p>
+    <input type="button" id="quitarevento" value="Quitar el click del primer parrafo" />-->
+
+    <!-- EJEMPO DE MODALES -->
+
+</body>
+</html>
+<script>
+    // Selectores
+    // $("p"); Coge todos los elementos <p></p>
+    // $("#idElemento"); Coge el elemento con ese id
+    // $(".claseElements"); coge todos los elementos que tengan esa clase
+    // $("div,p"); Coge todos los elementos div o p
+    // $(".clase1, .clase2"); Coge todos los elementos de la clase 1 o clase 2
+    // $("#id, .clase2, ul"); Coge todos los elementos de la id 1 o clase 2 o que sean elementos ul
+
+    // Selectores de jerarquia:
+    // $("p b"): selecciona todas las etiquetas b que esten en p
+    // $("p.parraforojo i"): selecciona todas las etiquetas i que esten dentro de p con la clase de parraforojo
+
+    // Selectores de parent>child.  hijos directos de otros
+    // $("p > b"): selecciona todos los b que sean hijos directos dentro de p.
+    // $("#capa > *"): selecciona todas las etiquetas que sean hijas directas del id capa
+
+
+
+    // Ejemplo 1
+    //$(function () {
+    //    $("li").attr("type", "square");
+    //    var itemsAzulGrande = $("ul > li.a");
+    //    var itemsRojoNegrita = $("ul").children(".b");
+    //    itemsAzulGrande.css("color", "blue");
+    //    itemsRojoNegrita.css("color", "red");
+    //    itemsRojoNegrita.css("font-weight", "bold");
+    //    itemsAzulGrande.css("font-size", "180%");
+    //})
+
+    // Ejemplo 2.
+    //$(function () {
+    //    $('input.fecha').attr("value", function () {
+    //        var f = new Date();
+    //        return f.getDate() + "/" + (f.getMonth() + 1) + "/" + f.getFullYear();
+    //    })
+    //})
+
+    // Ejemplo 3
+    //$(function () {
+    //    $("#boton").on("click", function () {
+    //        $("td").removeAttr("nowrap");
+    //    })
+    //})
+
+    // Ejercicio 1.
+    //$(function () {
+    //    $("#boton1").on("click", function () {
+    //        $("#capa1  p").removeAttr("style");
+    //    });
+    //    $("#boton2").on("click", function () {
+    //        $("#capa2 p").removeAttr("style");
+    //    });
+    //})
+
+    // Manejadores de eventos
+    // Manejadores de raton
+    // click
+    // dbclick
+    // hover
+    // mousedown
+    // mouseup
+    // mouseleave
+    // mousemove
+    // mouseover
+    // toggle()
+
+    // De teclado
+    // keydown()
+    // keypress()
+    // keyup()
+
+    // Combinadas teclado + raton
+    // focus()
+
+
+    // Ejemplo de toggle()
+    //$(function () {
+    //    $("#boton").on("click", function () {
+    //        $("#target").toggle("slow");
+    //    })
+    //})
+
+
+    // Funciones bind() y unbind()
+    //$(function () {
+    //    $("p").bind("mouseenter mouseleave", function () {
+    //        if ($(this).css("color") != "rgb(250,100,0)")
+    //            $(this).css("color", "rgb(250,100,0)");
+    //        else
+    //            $(this).css("color", "rgb(150,0,250)");
+    //    });
+
+
+    //    $(".miclase").bind("click", function () {
+    //        alert('Has hecho click');
+    //    });
+    //    $("#quitarevento").on("click", function () {
+    //        $(".miclase").unbind("click");
+    //    });
+    //});
+
+
+  
+
+</script>

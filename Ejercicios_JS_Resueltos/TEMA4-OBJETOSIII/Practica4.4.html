@@ -1,0 +1,19 @@
+<html>
+<head>
+	<script language="JavaScript" type="text/javascript">
+        function concatenar()
+        {
+            txtCompleto.value = txtNombre.value + " " + txtApellido.value;
+        }
+	
+	</script>
+</head>
+<body>
+    <form>
+        Nombre : <input type="text" id="txtNombre" placeholder="Introduzca nombre" /><br />
+        Apellido1 : <input type="text" id="txtApellido" placeholder="Introduzca primer apellido" /><br />
+        Nombre Completo : <input type="text" id="txtCompleto" placeholder="Nombre completo" readonly /><br />
+        <input type="button" value="Concatenar nombre" onclick="concatenar();" />
+    </form>
+</body>
+</html>

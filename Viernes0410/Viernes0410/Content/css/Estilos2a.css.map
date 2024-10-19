@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,IAAK;EAED,WAAW,EAAC,6BAA6B;EACzC,OAAO,EAAC,IAAI;ECJZ,OAAG;IACC,SAAS,EAAE,KAAa;EAG5B,OAAG;IACC,SAAS,EAAE,KAAa;EAG5B,OAAG;IACC,SAAS,EAAE,MAAa",
+"sources": ["../scss/Estilos2a.scss","../scss/_mixin2a.scss"],
+"names": [],
+"file": "Estilos2a.css"
+}

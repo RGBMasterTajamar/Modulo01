@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <form id="frm1">
+        Usuario: <input type="text" id="txtUsuario" />
+        <input type="button" id="btnVerUsuario"
+               value="Ver Usuario"
+               onclick="VerUsuario()" 
+        />
+    </form>
+</body>
+</html>
+
+<script>
+    function VerUsuario() {
+        var UserName = frm1.txtUsuario.value;
+        alert(UserName);
+    }
+</script>

@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventana Modal con jQuery y Bootstrap 5.3</title>
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="Scripts/jquery-3.7.0.js"></script> -->
+    <!-- Bootstrap 5.3 JavaScript Bundle (con Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Estilo CSS opcional -->
+    <style>
+        /* Puedes agregar algún estilo personalizado aquí si lo necesitas */
+        /* Estilos para el div con borde */
+        .div-con-borde {
+            width: 300px;
+            height: 250px;
+            border: 2px solid black; /* Grosor, estilo y color del borde */
+            padding: 20px; /* Espaciado interno del contenido */
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <!-- Boton que abre el modal -->
+            <div class="col-md-6 col-offset-3 div-con-borde">
+                <h3>Datos del usuario</h3>
+                <p><b>Nombre:</b><span id="displayName"></span></p>
+                <p><b>Email:</b><span id="displayEmail"></span></p>
+                <p><b>Password:</b><span id="displayPass"></span></p>
+                <button type="button" class="btn btn-primary text-center" id="openModal">Recoger Datos</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="userModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="userModalLabel">Ingresa tus datos</h5>
+                </div>
+                <div class="modal-body">
+                    <h2>Formulario de Registro</h2>
+                    <form id="registrationForm" class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="name" name="name" required minlength="3">
+                            <div class="invalid-feedback">
+                                Por favor, ingresa tu nombre (al menos 3 caracteres).
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                            <div class="invalid-feedback">
+                                Por favor, ingresa un correo electrónico válido.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="password" name="password" required minlength="6">
+                            <div class="invalid-feedback">
+                                La contraseña debe tener al menos 6 caracteres.
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" id="submitData">Enviar datos</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    $(function () {
+        // Abrir el modal
+        $("#openModal").on("click", function () {
+            var modal = new bootstrap.Modal($("#userModal"), { backdrop: 'static', keyboard: false });
+            modal.show();
+        });
+
+        // Enviar datos
+        $("#submitData").on("click", function (event) {
+            event.preventDefault();
+
+            var isValid = true;
+
+            // Validar nombre
+            var name = $("#name").val();
+            if (name.length < 3) {
+                $("#name").addClass('is-invalid');
+                isValid = false;
+            } else {
+                $("#name").removeClass("is-invalid").addClass("is-valid");
+            }
+
+            // Validar email
+            var email = $("#email").val();
+            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!emailPattern.test(email)) {
+                $("#email").addClass("is-invalid");
+                isValid = false;
+            } else {
+                $("#email").removeClass("is-invalid").addClass("is-valid");
+            }
+
+            // Validar password
+            var password = $("#password").val();
+            if (password.length < 6) {
+                $("#password").addClass('is-invalid');
+                isValid = false;
+            } else {
+                $("#password").removeClass("is-invalid").addClass("is-valid");
+            }
+
+            // Si todo va bien, mostramos los datos
+            if (isValid) {
+                $("#displayName").text(name);
+                $("#displayEmail").text(email);
+                $("#displayPass").text(password);
+
+                // Cerrar el modal
+                $("#userModal").modal('hide');
+            } else {
+                alert('Por favor, corrige los errores en el formulario.');
+            }
+        });
+
+        // Cierre del modal
+        $("#userModal").on("hidden.bs.modal", function () {
+            console.log("El modal se ha cerrado");
+        });
+    });
+</script>

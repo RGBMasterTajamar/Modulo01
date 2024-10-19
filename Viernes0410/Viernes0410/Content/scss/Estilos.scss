@@ -1,0 +1,29 @@
+﻿// Importacion de variables
+@import '_variables.scss';
+
+// Importacion de mixins
+@import '_mixin.scss';
+// Uso de variables en los estilos
+
+body{
+        font-family: 'Arial,Sans Serif Collection';
+        padding:20px;
+}
+
+.header{
+    @include flex-container(center, center);
+    background-color:#3498db;
+    color: white;
+    padding:20px;
+}
+
+.button-primary {
+    @include button-styles(#3498db, #fff);
+    margin-right:10px;
+}
+
+
+.button-secondary {
+    @include button-styles(#2ecc71, #fff);
+    margin-right: 10px;
+}

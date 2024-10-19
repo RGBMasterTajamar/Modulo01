@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="formulario">
+        <form method="post"
+              action="http://www.ucm.es" 
+              name="frmDatos"
+              id="frmDatos"
+              >
+            Nombre: <input type="text" name="txtNombre" />
+            <input type="button" 
+                   value="Aceptar" 
+                   onclick="comprobarNombre(frmDatos.txtNombre.value)"/>
+        </form>
+
+    </div>
+</body>
+</html>
+
+<script>
+    function comprobarNombre(nombre) {
+        if (nombre == "Andres") {
+            frmDatos.submit();
+        } else {
+            frmDatos.reset();
+        }
+    }
+</script>

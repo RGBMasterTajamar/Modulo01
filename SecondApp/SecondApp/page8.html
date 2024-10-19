@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <form id="frm1">
+        <select name="list1" multiple>
+            <option value="RMA">Real Madrid</option>
+            <option value="ATM">Atletico de Madrid</option>
+            <option value="LEG">Leganes</option>
+            <option value="RAY">Rayo Vallecano</option>
+        </select>
+        <br />
+
+        <input type="button" value="Mostrar" onclick="showSelected(this)"/><br />
+        Equipo seleccionado: <input type="text" name="seleccion" />
+    </form>
+</body>
+</html>
+
+<script>
+    //function showSelect() {
+    //    var index = frm1.list1.selectedIndex;
+    //    if (index >= 0) {
+    //        var seleccion = frm1.list1.options[index].value;
+    //        frm1.seleccion.value = seleccion;
+    //    }
+    //}
+
+    function getSelection(currentList) {
+        // DECLARAMOS ARRAY
+        var elementsSelected = new Array();
+        var indice = 0; 
+
+        for (var i = 0; i < currentList.length; i++) {
+            if (currentList.options[i].selected) {
+                elementsSelected[i] = currentList[i].value;
+                indice++;
+            }
+        }
+        alert(elementsSelected);
+        //return elementsSelected;
+    }
+
+    function showSelected(currentList) {
+        var selected = new Array();
+        selected = getSelection(currentList);
+        var msg = "Seleccionados los siguientes equipos: ";
+
+        for (var i = 0; i < selected.length; i++) {
+            var valor = selected[i];
+            //alert(valor);
+            //msg += valor + "\n";
+        }
+        //alert(msg);
+    }
+</script>

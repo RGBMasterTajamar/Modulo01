@@ -1,0 +1,25 @@
+<html>
+<head>
+</head>
+<body>
+
+<script type="text/javascript">
+  function calcularCubo()
+  {
+    var v=formulario1.txtValor.value;
+    v=parseInt(v);
+    var cubo=v*v*v;
+var cubo = Math.pow(v,3);
+    alert(cubo);
+  }
+</script>
+
+<form name="formulario1">
+  Ingrese un valor:
+  <input type="text" name="txtValor">
+  <br>
+  <input type="button" value="Calcular cubo" onClick="calcularCubo()">
+</form>
+
+</body>
+</html>

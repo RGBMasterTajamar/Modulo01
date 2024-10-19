@@ -1,0 +1,13 @@
+﻿@mixin encabezados($tamaño) {
+    h1 {
+        font-size: $tamaño - 1.2;
+    }
+
+    h2 {
+        font-size: $tamaño - 0.2;
+    }
+
+    h3 {
+        font-size: $tamaño - 0,5;
+    }
+}

@@ -1,0 +1,20 @@
+<html>
+<head>
+<title>uso del evento change</title>
+<script language="JavaScript" type="text/JavaScript">
+	var altura;
+	var peso;
+	function recoge_datos()
+	{
+		altura= eval(prompt("altura : " ));
+		peso = eval(prompt("peso : " ));
+		var indice_masa_corporal= altura / (peso*peso);
+		alert('su indice de masa corporal es : ' + indice_masa_corporal);
+	}
+
+</script>
+</head>
+<body onload = "recoge_datos();">
+</body>
+
+</html>

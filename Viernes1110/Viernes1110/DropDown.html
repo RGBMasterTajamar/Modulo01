@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/blitzer/jquery-ui.css" />
+    <script src="https://code.jquery.com/jquery-2.0.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+</head>
+<body>
+    <h1>Uso de dropdowns en JQueryUI</h1>
+    <label for="doctor">Doctor o Nurse</label>
+    <select id="doctor" name="doctor">
+        <option>No preference</option>
+        <optgroup label="Doctors">
+            <option>Alan Permaine</option>
+            <option>Peter Jackson</option>
+            <option>Peter Jackson</option>
+        </optgroup>
+        <optgroup label="Nurses">
+            <option>Melissa Mcall</option>
+            <option>Joan</option>
+            <option>Peter</option>
+        </optgroup>
+    </select>
+</body>
+</html>
+<script>
+    $(function () {
+        $("select").selectmenu();
+    })
+</script>

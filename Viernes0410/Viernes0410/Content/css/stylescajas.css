@@ -1,0 +1,30 @@
+/*.caja {
+    padding: 10px;
+    font-size: 1.2em;
+
+    &-borde {
+        border: 1px solid #ddd;
+    }
+
+    &-fondo {
+        background-color: #f0f0f0;
+    }
+
+    &-espaciadoextra {
+        padding: 20px;
+    }
+}*/
+.caja, .caja-borde, .caja-fondo, .caja-espaciadoextra, .caja-combinada {
+  padding: 10px;
+  font-size: 1.2em; }
+
+.caja-borde, .caja-combinada {
+  border: 1px solid #ddd; }
+
+.caja-fondo, .caja-combinada {
+  background-color: #f0f0f0; }
+
+.caja-espaciadoextra, .caja-combinada {
+  padding: 20px; }
+
+/*# sourceMappingURL=stylescajas.css.map */

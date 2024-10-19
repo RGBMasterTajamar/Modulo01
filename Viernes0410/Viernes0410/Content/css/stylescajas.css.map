@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA;;;;;;;;;;;;;;;GAeG;AAEH,sEAAM;EACF,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,KAAK;;AAGpB,4BAAY;EACR,MAAM,EAAE,cAAc;;AAG1B,4BAAY;EACR,gBAAgB,EAAE,OAAO;;AAG7B,qCAAqB;EACjB,OAAO,EAAE,IAAI",
+"sources": ["../scss/stylescajas.scss"],
+"names": [],
+"file": "stylescajas.css"
+}

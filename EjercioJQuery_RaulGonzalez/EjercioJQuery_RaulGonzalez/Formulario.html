@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <script src="Scripts/jquery-3.7.1.js"></script>
+</head>
+<body style="background-color: #bd9882 ">
+    <div class="container">
+        <h1 class="justify-content-center">Formulario con JQuery</h1>
+        <form name="form1">
+            <div class="mb-3 mt-3">
+                <label for="userName" class="form-label">Nombre:</label>
+                <input type="text" id="userName" class="form-control" />
+            </div>
+            <div class="mb-3 mt-3">
+                <label for="lastName" class="form-label">Apellido:</label>
+                <input type="text" id="userLastName" class="form-control" />
+            </div>
+            <input type="button" value="Concatenar Nombre" id="concatName" class="btn btn-primary" /><br />
+            <label class="form-label">Nombre Completo:</label>
+            <input type="text" id="fullName" class="form-control" readonly/><br />
+            <div class="form-check">
+                <label class="form-check-label" for="radio1">Hombre</label>
+                <input type="radio" class="form-check-input" id="radio1" name="sexo" value="Hombre" checked><br />
+                <label class="form-check-label" for="radio2">Mujer</label>
+                <input type="radio" class="form-check-input" id="radio2" name="sexo" value="Mujer">
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="check1" name="data" value="si" checked>
+                <label class="form-check-label">Compartir mis datos?</label>
+            </div>
+            <label class="form-label">Hobbies:</label>
+            <select class="form-select" id="hobbies">
+                <option></option>
+                <option>Futbol</option>
+                <option>Mecanica cuantica</option>
+                <option>Series</option>
+            </select><br /><br />
+            <input type="button" value="Enviar" id="submit" class="btn btn-success" />
+            <div class="mb-3 mt-3" id="resultData" style="display:none"></div>
+        </form>
+    </div>
+</body>
+</html>
+
+<script>
+    $(function () {
+        // Accion del boton Concatenar Nombre;
+        $("#concatName").click(function () {
+            let userName = $("#userName").val();
+            let lastName = $("#userLastName").val();
+            let fullName = userName + " " + lastName;
+            $("#fullName").val(fullName);
+        });
+
+        // Accioin del boton Enviar
+        $("#submit").click(function (e) {
+            e.preventDefault();
+
+            let sexo = $('input[name="sexo"]:checked').val();;
+            let check = $('input:checkbox[id=check1]:checked').val();
+            let hobbie = $("#hobbies").val();
+            let fullName = $("#fullName").val();
+
+            const resultadoHTML = `
+                    <p>Nombre Completo: ${fullName}</p>
+                    <p>Sexo: ${sexo}</p>
+                    <p>Compartir datos: ${check}</p>
+                    <p>Hobbies: ${hobbie}</p>
+                `;
+
+            $("#resultData").html(resultadoHTML).show();
+            
+
+        });
+
+    });
+</script>

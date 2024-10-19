@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\repositories\\Master\\Modulo 1\\SecondApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{73B798BF-ADC1-4DE0-9367-701978678607}|SecondApp\\SecondApp.csproj|d:\\repositories\\master\\modulo 1\\secondapp\\secondapp\\page9.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{73B798BF-ADC1-4DE0-9367-701978678607}|SecondApp\\SecondApp.csproj|solutionrelative:secondapp\\page9.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Page9.html",
+              "DocumentMoniker": "D:\\repositories\\Master\\Modulo 1\\SecondApp\\SecondApp\\Page9.html",
+              "RelativeDocumentMoniker": "SecondApp\\Page9.html",
+              "ToolTip": "D:\\repositories\\Master\\Modulo 1\\SecondApp\\SecondApp\\Page9.html",
+              "RelativeToolTip": "SecondApp\\Page9.html",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-10-03T18:55:19.292Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+﻿/*.caja {
+    padding: 10px;
+    font-size: 1.2em;
+
+    &-borde {
+        border: 1px solid #ddd;
+    }
+
+    &-fondo {
+        background-color: #f0f0f0;
+    }
+
+    &-espaciadoextra {
+        padding: 20px;
+    }
+}*/
+
+%caja {
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+%caja-borde {
+    border: 1px solid #ddd;
+}
+
+%caja-fondo {
+    background-color: #f0f0f0;
+}
+
+%caja-espaciadoextra {
+    padding: 20px;
+}
+
+.caja {
+    @extend %caja;
+
+    &-borde {
+        @extend %caja;
+        @extend %caja-borde;
+    }
+
+    &-fondo {
+        @extend %caja;
+        @extend %caja-fondo;
+    }
+
+    &-espaciadoextra {
+        @extend %caja;
+        @extend %caja-espaciadoextra;
+    }
+
+    &-combinada {
+        @extend %caja;
+        @extend %caja-borde;
+        @extend %caja-fondo;
+        @extend %caja-espaciadoextra;
+    }
+}
+

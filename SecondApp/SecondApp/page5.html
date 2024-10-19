@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <form method="post"
+          action="http://ucm.es"
+          name="formulario"
+          >
+        Edad: <input type="text" name="txtEdad" />
+        <input type="button"
+               value="Comprobar Edad"
+               onclick="comprobarEdad()" />
+    </form>
+</body>
+</html>
+
+<script>
+    function comprobarEdad() {
+        // OPERADOR TERNARIO : CONDICION ? EXPR1 : EXPR2
+        formulario.txtEdad.value >= 18 ? alert('Puedes entrar') : alert('abandona la zona');
+    }
+</script>

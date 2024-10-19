@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <form id="frm1">
+        <input type="checkbox" id="chkUno"/> Uno <br />
+        <input type="checkbox" id=""/> Dos <br />
+        <input type="checkbox"/> Tres <br />
+        <input type="checkbox"/> Cuatro <br />
+    </form>
+    <input type="button" onclick="activarCheckbox()"  value="Marcar"/>
+</body>
+</html>
+
+<script>
+
+    function activarCheckbox() {
+        for (var i = 0; i < frm1.elements.length; i++) {
+            if (frm1.elements[i].type == 'checkbox') {
+                frm1.elements[i].checked = true;
+            }
+        }
+    }
+</script>

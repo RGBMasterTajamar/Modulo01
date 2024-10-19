@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/blitzer/jquery-ui.css" />
+    <script src="https://code.jquery.com/jquery-2.0.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+</head>
+<body>
+    <input type="text" name="fecha" id="campofecha" hidden />
+    <input type="button" id="boton" value="Seleccionar Fecha" />
+    <input type="button" id="mostrarFecha" value="Mostrar fecha" />
+    <div id="dialog"></div>
+</body>
+</html>
+
+<script>
+
+    $(function () {
+        // CASTELLANIZACION DEL CALENDARIO
+        $.datepicker.regional['es'] = {
+            closeText: 'Cerrar',
+            prevText: '<Ant',
+            nextText: 'Sig>',
+            currentText: 'Hoy',
+            monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+            monthNamesShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+            dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+            dayNamesShort: ['Dom', 'Lun', 'Mar', 'Mié', 'Juv', 'Vie', 'Sáb'],
+            dayNamesMin: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sá'],
+            weekHeader: 'Sm',
+            dateFormat: 'dd/mm/yy',
+            firstDay: 1,
+            isRTL: false,
+            showMonthAfterYear: false,
+            yearSuffix: ''
+        };
+        $.datepicker.setDefaults($.datepicker.regional["es"]);
+
+        // Manejamos el evento click sobre el boton de Calendario para que muestre el calendario
+        $("#boton").on("click", function () {
+            $("#campofecha").datepicker("show");
+        });
+
+        // Sobre un campo de texto oculto guardamos el valor de la fecha
+        $("#campofecha").datepicker({
+            onSelect: function (date) {
+                // Manejamos el evento click en el boton que nos mostrara el dialog con el mensaje.
+                $("#mostrarFecha").on("click", function () {
+                    // Declaramos una variable que contendra el mensaje que queremos mostrar en el dialogo.
+                    var msg = "<p>La fecha seleccionada es: " + date + "</p>";
+
+                    // Creamos el dialog que mostraremos una vez sea pulsado el boton de Mostrar Fecha
+                    $("#dialog").dialog({
+                        buttons: {
+                            "OK": function () {
+                                $(this).dialog("close");
+                            }
+                        },
+                        title: "Fecha Seleccionada",
+                    }).html(msg); // Con el metodo html() incrustamos el msg que hemos creado
+                })
+            }
+        });
+    })
+
+    // Se puede simplificar en cuatro lineas
+
+
+</script>

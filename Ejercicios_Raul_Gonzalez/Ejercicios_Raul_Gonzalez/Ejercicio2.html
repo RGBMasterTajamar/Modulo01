@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Ejercicio 2</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    // Función para simular el lanzamiento de un dado
+    function lanzarDado() {
+        return Math.floor(Math.random() * 6) + 1; // Devuelve un número entre 1 y 6
+    }
+
+    // Array para almacenar los resultados de las sumas
+    let resultados = [];
+
+    // Realizar el lanzamiento de los dados 6 veces
+    for (let i = 0; i < 6; i++) {
+        let dado1 = lanzarDado();
+        let dado2 = lanzarDado();
+        let suma = dado1 + dado2; // Sumar los resultados de los dos dados
+        resultados.push(suma); // Añadir la suma al array
+    }
+
+    // Ordenar el array de mayor a menor
+    resultados.sort((a, b) => b - a);
+
+    // Mostrar los resultados
+    document.write(resultados);
+
+</script>

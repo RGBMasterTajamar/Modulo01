@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\repositories\\Master\\Modulo01\\Viernes2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BDC5DE1B-9E88-4A92-8F38-675A60254993}|Viernes2\\Viernes2.csproj|d:\\repositories\\master\\modulo01\\viernes2\\viernes2\\page1.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BDC5DE1B-9E88-4A92-8F38-675A60254993}|Viernes2\\Viernes2.csproj|solutionrelative:viernes2\\page1.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDC5DE1B-9E88-4A92-8F38-675A60254993}|Viernes2\\Viernes2.csproj|d:\\repositories\\master\\modulo01\\viernes2\\viernes2\\content\\scss\\customstyles.scss||{181FE41B-5A5D-479F-9F8F-BF665F4EBC2A}",
+      "RelativeMoniker": "D:0:0:{BDC5DE1B-9E88-4A92-8F38-675A60254993}|Viernes2\\Viernes2.csproj|solutionrelative:viernes2\\content\\scss\\customstyles.scss||{181FE41B-5A5D-479F-9F8F-BF665F4EBC2A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDC5DE1B-9E88-4A92-8F38-675A60254993}|Viernes2\\Viernes2.csproj|D:\\repositories\\Master\\Modulo01\\Viernes2\\viernes2\\content\\scss\\_variables.scss||{181FE41B-5A5D-479F-9F8F-BF665F4EBC2A}",
+      "RelativeMoniker": "D:0:0:{BDC5DE1B-9E88-4A92-8F38-675A60254993}|Viernes2\\Viernes2.csproj|solutionrelative:viernes2\\content\\scss\\_variables.scss||{181FE41B-5A5D-479F-9F8F-BF665F4EBC2A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Page1.html",
+              "DocumentMoniker": "D:\\repositories\\Master\\Modulo01\\Viernes2\\Viernes2\\Page1.html",
+              "RelativeDocumentMoniker": "Viernes2\\Page1.html",
+              "ToolTip": "D:\\repositories\\Master\\Modulo01\\Viernes2\\Viernes2\\Page1.html",
+              "RelativeToolTip": "Viernes2\\Page1.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-10-07T09:36:49.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "customStyles.scss",
+              "DocumentMoniker": "D:\\repositories\\Master\\Modulo01\\Viernes2\\Viernes2\\Content\\scss\\customStyles.scss",
+              "RelativeDocumentMoniker": "Viernes2\\Content\\scss\\customStyles.scss",
+              "ToolTip": "D:\\repositories\\Master\\Modulo01\\Viernes2\\Viernes2\\Content\\scss\\customStyles.scss",
+              "RelativeToolTip": "Viernes2\\Content\\scss\\customStyles.scss",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002663|",
+              "WhenOpened": "2024-10-07T09:33:22.738Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_variables.scss",
+              "DocumentMoniker": "D:\\repositories\\Master\\Modulo01\\Viernes2\\Viernes2\\Content\\scss\\_variables.scss",
+              "RelativeDocumentMoniker": "Viernes2\\Content\\scss\\_variables.scss",
+              "ToolTip": "D:\\repositories\\Master\\Modulo01\\Viernes2\\Viernes2\\Content\\scss\\_variables.scss",
+              "RelativeToolTip": "Viernes2\\Content\\scss\\_variables.scss",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002663|",
+              "WhenOpened": "2024-10-04T18:52:44.359Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

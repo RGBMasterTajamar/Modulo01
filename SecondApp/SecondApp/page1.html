@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" content="text/html" />
+    <title>Pagina sencilla</title>
+</head>
+<body style="border: solid green 3px">
+    <p>Algo de texto</p>
+    <p>Algo de texto</p>
+
+    <div id="div1" style="border: solid blue 3px">
+        <p>Algo de texto en div1</p>
+        <p>Algo de texto en div1</p>
+        <p>Algo de texto en div1</p>
+        <p>Algo de texto en div1</p>
+    </div>
+
+    <div id="div2" style="border: solid red 3px">
+        <p>Algo de texto en div2</p>
+        <p>Algo de texto en div2</p>
+        <p>Algo de texto en div2</p>
+        <p>Algo de texto en div2</p>
+    </div>
+
+    <p>Algo de texto</p>
+    <p>Algo de texto</p> 
+    <br />
+    <button onclick="getAllParaElements()">Mostrar todos los parrafos</button><br />
+    <button onclick="getAllParaDiv1()">Mostrar todos los parrafos div 1</button><br />
+    <button onclick="getAllParaDiv2()">Mostrar todos los parrafos div2</button><br />
+    <button onclick="removeAllParaDiv2('div2')">Eliminar todos los parrafos del div2</button><br />
+
+    <button id="Aceptar">OK</button>
+    <p id="demo"></p>
+
+</body>
+</html>
+<script>
+    /*
+    var parrafo = document.getElementById("parrafoPrimero");
+    parrafo.parentNode.removeChild(parrafo);
+    */
+
+    function getAllParaElements() {
+        var allParas = document.getElementsByTagName("p");
+        var numPara = allParas.length;
+
+        alert("Hay " + numPara + " <p> en este documento");
+    }
+
+    function getAllParaDiv1() {
+        var paraDiv1 = document.getElementById("div1");
+        var numPara = paraDiv1.getElementsByTagName("p");
+        var numParaDiv1 = numPara.length;
+
+        alert("Hay " + numParaDiv1 + " <p> en el Div 1");
+    }
+
+    function getAllParaDiv2() {
+        var paraDiv2 = document.getElementById("div2");
+        var numPara = paraDiv2.getElementsByTagName("p");
+        var numParaDiv2 = numPara.length;
+
+        alert("Hay " + numParaDiv2 + " <p> en el Div 2");
+    }
+
+    function removeAllParaDiv2(element) {
+        var para = document.getElementById("div2");
+        para.parentNode.removeChild(para);
+    }
+
+    var boton = document.getElementById("Aceptar");
+    boton.addEventListener("click", function () {
+        document.getElementById("demo").innerText = "Hola Master";
+    });
+</script>
